@@ -1,0 +1,70 @@
+*.log
+.DS_Store
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+# .gitignore file created for free with Tower (https://www.git-tower.com/)
+# For suggestions or improvements please contact us using support@git-tower.com
+# Generated on 2025-11-17
+# Includes: laravel, php
+
+### Universal ###
+# Common files that should be ignored in all projects
+
+# Logs
+*.log
+# Temporary files
+*.tmp
+*~
+
+*.bak
+
+# Local configuration that shouldn't be shared
+*.local
+
+### Laravel ###
+# Laravel framework specific files and directories
+
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+
+storage/framework/
+storage/logs/
+
+docker-compose.override.yml
+
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+*.sqlite
+.idea
+.vscode
+
+### Php ###
+# php specific files
+
+vendor/
+composer.lock

@@ -1,0 +1,99 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Goudy Old Style", serif;
+    color: black;
+}
+
+a:-webkit-any-link{
+    text-decoration: none;
+    color: black;
+}
+
+.article {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+Button {
+    background-color: white;
+    color: black;
+    font-family: "Goudy Old Style", serif   ;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.article {
+    border-radius: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.article button {
+   border: none;
+}
+
+#articleForm div {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+#articleForm {
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr 3fr 1fr;
+    row-gap: 20px;
+}
+
+#articleForm #saveButton {
+    width: 50%;
+    justify-self: center;
+}
+
+
+.article-crud-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.article-crud-content .categories{
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    justify-items: center;
+    padding: 20px;
+    row-gap: 20px;
+}
+
+.article-crud-content .categories #categoryForm {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.article-crud-content .message {
+    color: green;
+}
+
+#articleForm div #usedCategoriesForm {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.article-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

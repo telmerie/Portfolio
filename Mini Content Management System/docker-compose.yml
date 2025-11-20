@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  cms:
+    build: 
+      context: .
+      dockerfile: dockerfile  
+    volumes:
+      - .:/cms
+    depends_on:
+      mysql:
+        condition: service_healthy # This is the key part
+    ports:
+      - "8000:8000"  
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: CMS
+    healthcheck:
+      test: ["CMD", "mysql", "--user=root", "--password=root", "-e", "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME='CMS'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s 
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
